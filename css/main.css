@@ -1,0 +1,41 @@
+* {box-sizing: border-box};
+
+
+.intro-2 {
+    background-color: blue no-repeat center center;
+    background-size: cover;
+    opacity: 0.95;
+}
+
+.about {
+    text-align: right;
+}
+
+#container {
+    width: 70%;
+    margin: 40px auto 0;
+    padding: 50px;
+    box-sizing: border-box;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.amount, .output {
+    width: 40%;
+    margin: 20px auto 0;
+}
+
+.content {
+    width: 70%;
+    margin: 20px auto 0;
+}
+
+#frmOpt, #fromCurrency, #toCurrency {
+    margin: 10px auto 0;
+}
+
+#fromCurrency, #toCurrency {
+    width: 50%;
+}

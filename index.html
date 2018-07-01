@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+    <link rel="icon" href="conversion.png" type="image/png">
+    
+    <title>Currency Converter</title>
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/idb/idb.js"></script>
+    <script src="js/jQuery/jquery-3.3.1.min.js"></script>
+</head>
+
+<body class="intro">
+
+<!--navigation bar statrs from here   -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <a class="navbar-brand" href="#">Currency Converter</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </ul>
+        
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link" href="about.html"><i class="fas fa-info-circle" style="color: yellow"></i> About<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+</nav>
+<!--navigation bar ends here-->
+
+<!--main page starts from here-->
+<main class="container shadow p-3 mb-5 bg-white rounded mx-auto" id="container">
+    <h2>Currency Converter</h2>
+   
+<!--amount input section starts here-->
+    <section class="input-group mb-3 amount">
+        <section class="input-group-prepend">
+          <span class="input-group-text"><b>Amount</b></span>
+        </section>
+        <input type="number" class="form-control" placeholder="" id="amount" min="1" onfocus="this.value=''">
+    </section>
+<!--amount input section ends here-->
+      
+<!--conversion from the original currency section starts here-->
+    <section class="input-group mb-3 content">
+        <section class="input-group-prepend" id="frmOpt">
+        <label class="input-group-text" for="fromCurrency"><b>Convert From</b></label>
+        </section>
+        <select class="custom-select fromCurrency" id="fromCurrency" name="currency">
+        <option value=""></option>
+        </select>
+    </section>
+<!--conversion from the original currency section ends here-->
+   
+<!--conversion to the desired currency section starts here-->    
+    <section class="input-group mb-3 content">
+        <section class="input-group-prepend" id="frmOpt">
+        <label class="input-group-text toCurrency" for="toCurrency"><b>Convert To</b></label>
+        </section>
+        <select class="custom-select toCurrency" id="toCurrency" name="currency">
+        <option value=""></option>
+        </select>
+    </section>
+<!--conversion to the desired currency section ends here-->  
+
+<!--conversion button starts here-->
+    <button type="button" class="btn btn-outline-info convert" id="convert"><i class="fas fa-sync-alt" style="color: lightblue"></i> <b>Convert</b></button>
+<!--conversion button section ends here-->
+
+<!--the output section starts here-->
+    <section class="input-group mb-3 output">
+        <section class="input-group-prepend">
+          <span class="input-group-text"><b>Exchange Rate</b></span>
+        </section>
+        <input type="number" class="form-control" value="0" id="output" disabled>
+    </section>
+<!--the output section ends here-->
+
+</main>
+<!--main page ends here-->
+
+<script src="js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/serviceworker/sw.js"></script>
+</body>
+</html>
+
+
